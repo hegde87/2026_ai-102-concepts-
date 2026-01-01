@@ -1,0 +1,14 @@
+# How to make a REST API call against Translator Service 
+# https://learn.microsoft.com/en-us/rest/api/translator/translator/translate?view=rest-translator-v3.0&tabs=HTTP#uri-parameters
+
+POST https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=it
+Content-Type: application/json
+Ocp-Apim-Subscription-Key: xx
+Ocp-Apim-Subscription-Region: eastus
+
+[
+  {
+    "Text": "I would really like to drive your car."
+  }
+]
+
