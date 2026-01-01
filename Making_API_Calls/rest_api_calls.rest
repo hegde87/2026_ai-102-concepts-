@@ -1,0 +1,23 @@
+## We can make REST API calls 
+# https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/quickstarts-sdk/image-analysis-client-library-40?tabs=visual-studio%2Cwindows&pivots=programming-language-rest-api
+
+# GET https://www.google.com 
+
+# we have 3 image in the same directory
+# lets call computer vision service ---> image tagging ---> generate a caption for each image
+
+# How to make API Calls using their extentions 
+
+# How do we make a API Call to Azure Computer Vision Service to generate image captions
+
+
+POST https://vision3300.cognitiveservices.azure.com/computervision/imageanalysis:analyze?features=caption&model-version=latest&language=en&api-version=2024-02-01
+
+# if we want to take the image from local system
+Content-Type: application/octet-stream
+Ocp-Apim-Subscription-Key: 
+
+# how do we pass are local image file 
+< ./AzureAIVision-ImageTagging.png
+
+
