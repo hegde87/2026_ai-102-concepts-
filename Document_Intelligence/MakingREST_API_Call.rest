@@ -1,0 +1,7 @@
+POST "https://docume300.cognitiveservices.azure.com/documentintelligence/documentModels/prebuilt-layout:analyze?api-version=2024-11-30" 
+Content-Type: application/json 
+Ocp-Apim-Subscription-Key: 
+
+{
+    "urlSource": "https://blob300.blob.core.windows.net/documents/AzureCertifications3300.pdf"
+}

@@ -1,0 +1,26 @@
+# Azure AI MultiService Account -- we want to create 
+# we need to issue 2 request 
+# 1 -->POST Methos -->give us -->Token 
+POST https://login.microsoftonline.com/xxxxxxxxxxx-2c3c-xx51-xxxx-c333000/oauth2/v2.0/token 
+Content-Type: application/x-www-form-urlencoded
+
+client_id:ffea8e64-8b89-xxxf-a798-xxxxxxxxx&
+scope=https://management.azure.com/.default&
+client_secret:
+grant_type=client_credentials
+
+# This is to create my resources in Azure
+PUT https://management.azure.com/subscriptions/xxxxxxxxxxxf-8031-xxxx-xx85-cf5xxxxaf333000/resourceGroups/ai-group/providers.Microsoft.CognitiveServices/accounts/aiaccount5499?api-version=2023-10-01
+Authorization: Bearer <put token here>
+Content-Type: application/json
+
+{
+    "location": "eastus",
+    "sku": {
+        "name": "S0"
+    },
+    "kind": "CognitiveServices",
+    "properties": {
+
+    }
+}
